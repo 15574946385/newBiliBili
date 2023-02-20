@@ -1,0 +1,2 @@
+rootProject.name = "newBiliBili"
+include ':app'
