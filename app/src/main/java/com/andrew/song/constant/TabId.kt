@@ -4,6 +4,8 @@ import androidx.annotation.StringDef
 
 @StringDef(
     TabId.HOME,
+    TabId.ACTIVE,
+    TabId.PURCHASE,
     TabId.ACGN,
     TabId.SMALL_VIDEO,
     TabId.GOLD,
@@ -14,6 +16,8 @@ import androidx.annotation.StringDef
 annotation class TabId {
     companion object {
         const val HOME = "home"
+        const val ACTIVE = "active"
+        const val PURCHASE = "purchase"
         const val ACGN = "acgn"
         const val SMALL_VIDEO = "small_video"
         const val GOLD = "gold"

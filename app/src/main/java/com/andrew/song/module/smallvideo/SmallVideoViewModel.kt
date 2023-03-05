@@ -6,15 +6,18 @@ import com.andrew.song.base.BaseViewModel
 import com.andrew.song.bean.VideoBean
 import com.andrew.song.constant.PageName
 import com.andrew.song.network.NetworkApi
+import com.andrew.song.util.d
 import kotlinx.coroutines.launch
 
 class SmallVideoViewModel : BaseViewModel() {
 
+    val TAG = "SmallVideoViewModel"
     val helloWorldLiveData = MutableLiveData<Result<VideoBean>>()
 
     fun requestVideoDetail(id: String) {
         viewModelScope.launch {
             val result = NetworkApi.requestVideoDetail(id)
+            d(TAG, "little song $result")
             helloWorldLiveData.value = result
         }
     }

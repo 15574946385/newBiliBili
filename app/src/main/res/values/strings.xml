@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">newBiliBili</string>
     <string name="page_home">首页</string>
+    <string name="page_active">动态</string>
+    <string name="page_purchase">会员购</string>
     <string name="page_small_video">小视频</string>
     <string name="page_acgn">二次元</string>
     <string name="page_gold">领福利</string>

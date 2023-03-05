@@ -14,6 +14,7 @@ import com.andrew.song.module.acgn.AcgnFragment
 import com.andrew.song.module.discovery.DiscoveryFragment
 import com.andrew.song.module.home.HomeFragment
 import com.andrew.song.module.mine.MineFragment
+import com.andrew.song.module.smallvideo.SmallVideoFragment
 import com.andrew.song.widget.NavigationView
 import com.andrew.song.widget.TabIndicatorView
 
@@ -63,11 +64,10 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     private fun initTabs() {
         val tabs = listOf(
             Tab(TabId.HOME, getString(R.string.page_home), R.drawable.selector_btn_home, HomeFragment::class),
-            Tab(TabId.ACGN, getString(R.string.page_acgn), R.drawable.selector_btn_acgn, AcgnFragment::class),
-            // Tab(TabId.SMALL_VIDEO, getString(R.string.page_small_video), R.drawable.selector_btn_small_video, SmallVideoFragment::class),
-            // Tab(TabId.GOLD, getString(R.string.page_gold), R.drawable.selector_btn_gold, GoldFragment::class),
-            Tab(TabId.DISCOVERY, getString(R.string.page_discovery), R.drawable.selector_btn_discovery, DiscoveryFragment::class),
-            Tab(TabId.MINE, getString(R.string.page_mine), R.drawable.selector_btn_mine, MineFragment::class)
+            Tab(TabId.SMALL_VIDEO, getString(R.string.page_small_video), R.drawable.selector_btn_small_video, SmallVideoFragment::class),
+            Tab(TabId.ACTIVE, getString(R.string.page_active), R.drawable.selector_btn_acgn, AcgnFragment::class),
+            Tab(TabId.PURCHASE, getString(R.string.page_purchase), R.drawable.selector_btn_discovery, DiscoveryFragment::class),
+            Tab(TabId.MINE, getString(R.string.page_mine), R.drawable.selector_btn_mine, MineFragment::class),
         )
 
         viewBinding.fragmentTabHost.run {
@@ -81,7 +81,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
                         viewBinding.tabTitle.text = title
                     })
                 }
-                addTab(tabSpec, fragmentClz.java, null)
+                addTab(tabSpec, fragmentClz.java, null)   // 添加所有tabs进入列表
             }
 
             setOnTabChangedListener { tabId ->

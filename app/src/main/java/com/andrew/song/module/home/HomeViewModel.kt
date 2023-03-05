@@ -20,7 +20,17 @@ class HomeViewModel : BaseRecyclerViewModel() {
             delay(1000L)
             val viewDataList = mutableListOf<BaseViewData<*>>()
             if (!isLoadMore) {
-                viewDataList.add(BannerViewData(BannerBean(listOf("https://img1.baidu.com/it/u=2148838167,3055147248&fm=26&fmt=auto", "https://img1.baidu.com/it/u=2758621636,2239499009&fm=26&fmt=auto", "https://img2.baidu.com/it/u=669799662,2628491047&fm=26&fmt=auto"))))
+                viewDataList.add(
+                    BannerViewData(
+                        BannerBean(
+                            listOf(
+                                "https://pic2.zhimg.com/v2-848ed6d4e1c845b128d2ec719a39b275_b.jpg",
+                                "https://pic2.zhimg.com/80/v2-40c024ce464642fcab3bbf1b0a233174_hd.jpg",
+                                "https://pic2.zhimg.com/v2-848ed6d4e1c845b128d2ec719a39b275_b.jpg"
+                            )
+                        )
+                    )
+                )
                 for (i in 0..10) {
                     if (i != 0 && i % 6 == 0) {
                         viewDataList.add(LargeVideoViewData(VideoBean("aaa", "我是标题", "xxx", "aaa", "up", 10000L, VideoType.LARGE)))
